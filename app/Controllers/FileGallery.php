@@ -53,12 +53,7 @@ class FileGallery extends BaseController
         if (is_dir($upload_dir)) {
             $this->rmdir_recursive($upload_dir);
         }
-        mkdir($upload_dir, 0755, true);
-        $upload_files_dir = ROOTPATH . $this->upload_dir.'files/';
-        mkdir($upload_files_dir, 0755, true);
-        $upload_thumbs_dir = ROOTPATH . $this->upload_dir.'thumbs/';
-        mkdir($upload_thumbs_dir, 0755, true);
-
+        
         return redirect()->to('/');
     }
 
