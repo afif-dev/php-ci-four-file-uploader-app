@@ -28,8 +28,6 @@
 
 # CI_ENVIRONMENT = production
 
-CI_ENVIRONMENT = development
-
 #--------------------------------------------------------------------
 
 # APP
