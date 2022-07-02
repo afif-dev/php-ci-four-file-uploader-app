@@ -14,7 +14,7 @@ class Upload extends BaseController
         $this->upload_file_max =  env('app.uploadFileMax', 1000);
         $this->upload_dir =  env('app.publicUploadDir', '/public/uploads/');
         $this->upload_path =  env('app.publicUploadPath', '/uploads/');
-        $this->allow_upload =  env('app.allowUpload', 'mock');
+        $this->allow_upload =  env('app.allowUpload', true);
     }
     
     public function index()
