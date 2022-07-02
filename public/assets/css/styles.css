@@ -1,0 +1,11 @@
+.break-word {
+  word-break: break-all;
+}
+#app {
+  padding-bottom: 3.5rem;
+}
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}

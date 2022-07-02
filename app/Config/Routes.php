@@ -35,7 +35,19 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+// $routes->get('/', 'Home::index');
+
+$routes->get('file-gallery', 'FileGallery::index');
+$routes->get('file-gallery/download/(:segment)', 'FileGallery::dowloadFile/$1');
+$routes->get('upload/single', 'Upload::index');
+$routes->get('upload/multiple', 'Upload::multiple');
+$routes->get('upload/dropzone', 'Upload::dropzone');
+$routes->post('upload/img', 'Upload::uploadImage');
+$routes->post('upload/pdf', 'Upload::uploadPdf');
+
+$routes->get('/', 'FileGallery::index');
+$routes->get('pages', 'Pages::index');
+$routes->get('(:any)', 'Pages::view/$1');
 
 /*
  * --------------------------------------------------------------------
