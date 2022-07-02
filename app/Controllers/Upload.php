@@ -57,7 +57,6 @@ class Upload extends BaseController
         return view('pages/upload_form_dropzone', $data);
     }
 
-
     public function uploadImage()
     {
         $noRedirect = $this->request->getPost('no-redirect');

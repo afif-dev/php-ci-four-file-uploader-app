@@ -6,11 +6,12 @@ use CodeIgniter\Files\FileCollection;
 
 class FileGallery extends BaseController
 {   
-    protected $upload_dir, $upload_path;  
+    protected $upload_dir, $upload_path, $allow_upload;  
 
     public function __construct() {
         $this->upload_dir =  env('app.publicUploadDir', '/public/uploads/');
         $this->upload_path =  env('app.publicUploadPath', '/uploads/');
+        $this->allow_upload =  env('app.allowUpload', true);
     
         $upload_dir = ROOTPATH . $this->upload_dir;
         if (!is_dir($upload_dir)) {
@@ -49,9 +50,11 @@ class FileGallery extends BaseController
 
     public function reset()
     {
-        $upload_dir = ROOTPATH . $this->upload_dir;
-        if (is_dir($upload_dir)) {
-            $this->rmdir_recursive($upload_dir);
+        if($this->allow_upload === true){
+            $upload_dir = ROOTPATH . $this->upload_dir;
+            if (is_dir($upload_dir)) {
+                $this->rmdir_recursive($upload_dir);
+            }    
         }
         
         return redirect()->to('/');
