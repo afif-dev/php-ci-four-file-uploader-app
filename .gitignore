@@ -65,7 +65,9 @@ writable/debugbar/*
 php_errors.log
 
 public/uploads/files/*
+!public/uploads/files/index.html
 public/uploads/thumbs/*
+!public/uploads/thumbs/index.html
 
 #-------------------------
 # User Guide Temp Files
