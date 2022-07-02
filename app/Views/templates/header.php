@@ -76,9 +76,9 @@
         </a>
     </li>
     <li>
-        <a href="https://github.com/afif-dev" target="_blank" class="has-icon">
+        <a href="https://github.com/afif-dev/php-ci-four-file-uploader-app" target="_blank" class="has-icon">
         <span class="icon has-update-mark"><i class="mdi mdi-github-circle"></i></span>
-        <span class="menu-item-label">GitHub</span>
+        <span class="menu-item-label">GitHub Repo</span>
         </a>
     </li>
     <li>

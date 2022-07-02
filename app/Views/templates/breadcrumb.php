@@ -11,9 +11,9 @@
     <div class="level-right">
       <div class="level-item">
         <div class="buttons is-right">
-          <a href="https://github.com/afif-dev" target="_blank" class="button is-primary">
+          <a href="https://github.com/afif-dev/php-ci-four-file-uploader-app" target="_blank" class="button is-primary">
             <span class="icon"><i class="mdi mdi-github-circle"></i></span>
-            <span>GitHub</span>
+            <span>GitHub Repo</span>
           </a>
         </div>
       </div>
