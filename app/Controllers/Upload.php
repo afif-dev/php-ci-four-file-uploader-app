@@ -15,6 +15,19 @@ class Upload extends BaseController
         $this->upload_dir =  env('app.publicUploadDir', '/public/uploads/');
         $this->upload_path =  env('app.publicUploadPath', '/uploads/');
         $this->allow_upload =  env('app.allowUpload', true);
+
+        $upload_dir = ROOTPATH . $this->upload_dir;
+        if (!is_dir($upload_dir)) {
+            mkdir($upload_dir, 0755, true);
+        }
+        $upload_files_dir = ROOTPATH . $this->upload_dir.'files/';
+        if (!is_dir($upload_files_dir)) {
+            mkdir($upload_files_dir, 0755, true);
+        }
+        $upload_thumbs_dir = ROOTPATH . $this->upload_dir.'thumbs/';
+        if (!is_dir($upload_thumbs_dir)) {
+            mkdir($upload_thumbs_dir, 0755, true);
+        }
     }
     
     public function index()

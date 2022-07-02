@@ -38,6 +38,7 @@ $routes->set404Override();
 // $routes->get('/', 'Home::index');
 
 $routes->get('file-gallery', 'FileGallery::index');
+$routes->get('file-gallery/reset', 'FileGallery::reset');
 $routes->get('file-gallery/download/(:segment)', 'FileGallery::dowloadFile/$1');
 $routes->get('upload/single', 'Upload::index');
 $routes->get('upload/multiple', 'Upload::multiple');
