@@ -34,7 +34,7 @@ foreach($files as $file){
       krsort($files_arr);
       foreach($files_arr as $kfile => $file):
         ?>  
-        <div class="column is-one-quarter break-word">
+        <div class="column is-full-mobile is-half-is-one-third-tablet is-one-third-desktop is-one-quarter-widescreen is-one-fifth-fullhd break-word">
           <div class="box">
             <?php 
             if(in_array($file->guessExtension(), $accept_ext)): ?> 
