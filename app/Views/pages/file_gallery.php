@@ -1,3 +1,11 @@
+<?php
+$files_arr = [];
+foreach($files as $file){
+  if($file->guessExtension() != '') {
+  $files_arr[] = $file;
+  }
+}
+?>
 <?= $this->extend('templates/layouts/default') ?>
 
 <?= $this->section('content') ?>
@@ -17,16 +25,12 @@
     <header class="card-header">
       <p class="card-header-title">
         <span class="icon"><i class="mdi mdi-folder-multiple-image"></i></span>
-        Total files is <?= count($files) ?>
+        Total files is <?= count($files_arr) ?>
       </p>
     </header>
     <div class="card-content">
       <div class="columns is-multiline is-mobile">
       <?php
-      $files_arr = [];
-      foreach($files as $file){
-        $files_arr[] = $file;
-      }
       krsort($files_arr);
       foreach($files_arr as $kfile => $file):
         ?>  
